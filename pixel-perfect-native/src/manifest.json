@@ -1,0 +1,24 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "commands": [
+    {
+      "name": "my-command",
+      "identifier": "pixel-perfect.my-command-identifier",
+      "script": "./my-command.js",
+      "shortcut": "ctrl shift p",
+      "handlers": {
+        "run": "onRun",
+        "actions": {
+          "Shutdown": "onShutdown"
+        }
+      }
+    }
+  ],
+  "menu": {
+    "title": "pixel-perfect",
+    "items": [
+      "pixel-perfect.my-command-identifier"
+    ]
+  }
+}
