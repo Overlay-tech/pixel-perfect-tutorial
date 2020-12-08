@@ -1,8 +1,12 @@
 .PHONY: install
 install:
-	cd pixel-perfect-native && npm i
-	cd pixel-perfect-web && npm i
-.PHONY: build
-build:
-	cd pixel-perfect-native && npm run build
-	open pixel-perfect-native/pixel-perfect.sketchplugin
+	cd sketch && npm i
+	cd figma && npm i
+	cd web && npm i
+.PHONY: build-sketch
+build-sketch:
+	cd sketch && npm run build
+	open sketch/pixel-perfect.sketchplugin
+.PHONY: build-figma
+build-figma:
+	cd figma && npm run build

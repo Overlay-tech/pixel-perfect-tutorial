@@ -22,11 +22,6 @@ export default function () {
 
   const webContents = browserWindow.webContents
 
-  // print a message when the page loads
-  webContents.on('did-finish-load', () => {
-    UI.message('UI loaded!')
-  })
-
   // add a handler for a call from web content's javascript
   webContents.on('nativeLog', s => {
     UI.message(s)
